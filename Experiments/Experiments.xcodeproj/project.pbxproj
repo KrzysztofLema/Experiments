@@ -14,6 +14,7 @@
 		955E099E25B31D0B00A3D0C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */; };
 		955E09A925B31D0B00A3D0C7 /* ExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09A825B31D0B00A3D0C7 /* ExperimentsTests.swift */; };
 		955E09B425B31D0B00A3D0C7 /* ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */; };
+		95DA96BD25B9E84A00447478 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA96BC25B9E84A00447478 /* FirstView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		955E09AF25B31D0B00A3D0C7 /* ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsUITests.swift; sourceTree = "<group>"; };
 		955E09B525B31D0B00A3D0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95DA96BC25B9E84A00447478 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				955E099125B31D0700A3D0C7 /* AppDelegate.swift */,
+				955E099A25B31D0B00A3D0C7 /* Assets.xcassets */,
+				95DA96BC25B9E84A00447478 /* FirstView.swift */,
+				955E099F25B31D0B00A3D0C7 /* Info.plist */,
+				955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */,
 				955E099325B31D0700A3D0C7 /* SceneDelegate.swift */,
 				955E099525B31D0700A3D0C7 /* ViewController.swift */,
-				955E099A25B31D0B00A3D0C7 /* Assets.xcassets */,
-				955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */,
-				955E099F25B31D0B00A3D0C7 /* Info.plist */,
 			);
 			path = Experiments;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				955E099625B31D0700A3D0C7 /* ViewController.swift in Sources */,
+				95DA96BD25B9E84A00447478 /* FirstView.swift in Sources */,
 				955E099225B31D0700A3D0C7 /* AppDelegate.swift in Sources */,
 				955E099425B31D0700A3D0C7 /* SceneDelegate.swift in Sources */,
 			);
