@@ -5,14 +5,23 @@
 //  Created by Krzysztof Lema on 21/01/2021.
 //
 
-import UIKit
-
-class FirstView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+import SwiftUI
+struct FirstView: View {
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    init() {}
+  
+    var body: some View {
+        ZStack {
+          Text("F           BER")
+            .font(.largeTitle)
+            .foregroundColor(.black)
+        }
     }
 }
+#if DEBUG
+struct SplashScreen_Previews : PreviewProvider {
+  static var previews: some View {
+    FirstView()
+  }
+}
+#endif
