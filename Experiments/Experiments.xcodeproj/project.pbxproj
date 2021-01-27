@@ -14,6 +14,8 @@
 		955E099E25B31D0B00A3D0C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */; };
 		955E09A925B31D0B00A3D0C7 /* ExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09A825B31D0B00A3D0C7 /* ExperimentsTests.swift */; };
 		955E09B425B31D0B00A3D0C7 /* ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */; };
+		959A870F25C204BC006BD867 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A870E25C204BC006BD867 /* LoginScreenViewController.swift */; };
+		959A871425C204D1006BD867 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A871325C204D1006BD867 /* LoginScreenView.swift */; };
 		95DA96BD25B9E84A00447478 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA96BC25B9E84A00447478 /* FirstView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		955E09AF25B31D0B00A3D0C7 /* ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsUITests.swift; sourceTree = "<group>"; };
 		955E09B525B31D0B00A3D0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959A870E25C204BC006BD867 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		959A871325C204D1006BD867 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		95DA96BC25B9E84A00447478 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 				955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */,
 				955E099325B31D0700A3D0C7 /* SceneDelegate.swift */,
 				955E099525B31D0700A3D0C7 /* ViewController.swift */,
+				959A870E25C204BC006BD867 /* LoginScreenViewController.swift */,
+				959A871325C204D1006BD867 /* LoginScreenView.swift */,
 			);
 			path = Experiments;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				95DA96BD25B9E84A00447478 /* FirstView.swift in Sources */,
 				955E099225B31D0700A3D0C7 /* AppDelegate.swift in Sources */,
 				955E099425B31D0700A3D0C7 /* SceneDelegate.swift in Sources */,
+				959A871425C204D1006BD867 /* LoginScreenView.swift in Sources */,
+				959A870F25C204BC006BD867 /* LoginScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
