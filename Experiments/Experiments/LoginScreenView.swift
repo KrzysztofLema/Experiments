@@ -16,12 +16,25 @@ struct LoginScreenView: View {
     var body: some View {
         VStack {
             TextField("Login", text: $login)
-                .padding()
+                .padding(EdgeInsets(top: 8, leading: 16, bottom: 7, trailing: 16))
+                .background(Color.white)
+                .overlay(RoundedRectangle(cornerRadius: 8)
+                            .strokeBorder(lineWidth: 2)
+                            .foregroundColor(.blue))
+                .shadow(color: Color.gray.opacity(0.4), radius: 3, x: 1, y: 2)
+                
+               
+                
             TextField("Password", text: $password)
                 .padding()
+                .foregroundColor(.white)
+                .accentColor(.white)
+                .background(Color.gray)
+                
             Button("Log in") {}
                 .buttonStyle(FilledButton())
         }
+        .padding()
     }
 }
 
@@ -38,7 +51,11 @@ struct FilledButton: ButtonStyle {
             .label
             .foregroundColor(.white)
             .padding()
-            .background(Color.white)
+            .background(Color.gray)
             .cornerRadius(8)
     }
+}
+
+struct CustomTextField {
+    
 }
