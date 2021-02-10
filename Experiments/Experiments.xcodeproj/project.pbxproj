@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		950A23C625D4937A00565A08 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A23C525D4937A00565A08 /* LoginViewModel.swift */; };
+		950A23E125D49C6B00565A08 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A23E025D49C6B00565A08 /* MainViewModel.swift */; };
+		950A23E925D49CEB00565A08 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A23E825D49CEB00565A08 /* MainViewController.swift */; };
 		955E099225B31D0700A3D0C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E099125B31D0700A3D0C7 /* AppDelegate.swift */; };
 		955E099425B31D0700A3D0C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E099325B31D0700A3D0C7 /* SceneDelegate.swift */; };
 		955E099625B31D0700A3D0C7 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E099525B31D0700A3D0C7 /* SplashScreenViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		950A23C525D4937A00565A08 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		950A23E025D49C6B00565A08 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		950A23E825D49CEB00565A08 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		955E098E25B31D0700A3D0C7 /* Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		955E099125B31D0700A3D0C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		955E099325B31D0700A3D0C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		950A23B725D4927A00565A08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				950A23DF25D49C5B00565A08 /* MainScreen */,
 				950A23B925D4928E00565A08 /* SplashScreen */,
 				950A23B825D4928600565A08 /* Login */,
 			);
@@ -108,6 +113,15 @@
 				955E099525B31D0700A3D0C7 /* SplashScreenViewController.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		950A23DF25D49C5B00565A08 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				950A23E025D49C6B00565A08 /* MainViewModel.swift */,
+				950A23E825D49CEB00565A08 /* MainViewController.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		955E098525B31D0700A3D0C7 = {
@@ -296,7 +310,9 @@
 				955E099425B31D0700A3D0C7 /* SceneDelegate.swift in Sources */,
 				959A871425C204D1006BD867 /* LoginScreenView.swift in Sources */,
 				959A870F25C204BC006BD867 /* LoginScreenViewController.swift in Sources */,
+				950A23E925D49CEB00565A08 /* MainViewController.swift in Sources */,
 				950A23C625D4937A00565A08 /* LoginViewModel.swift in Sources */,
+				950A23E125D49C6B00565A08 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
