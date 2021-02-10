@@ -15,11 +15,12 @@ struct LoginScreenView: View {
     let blueColor = Color(.systemBlue)
     var body: some View {
         VStack {
+            
             HStack {
                 Image(systemName: "moon.stars")
-                    .accentColor(.blue)
-                    .
-
+                    .scaleEffect(3)
+                    .foregroundColor(.blue)
+                    .offset(x: -15)
                 VStack {
                     Text("Welcome to")
                         .italic()
@@ -30,23 +31,21 @@ struct LoginScreenView: View {
                         .foregroundColor(.blue)
                 }
             }
-          
             .lineLimit(2)
             .multilineTextAlignment(.trailing)
             .padding(.horizontal)
             
-            
-            
             TextField("Login", text: $login)
                 .textFieldStyle(LoginTextField())
-                
+            
             TextField("Password", text: $password)
                 .textFieldStyle(LoginTextField())
-                
+            
             Button("Log in") {}
                 .buttonStyle(FilledButton())
         }
-        .padding()
+        padding()
+        
     }
 }
 
@@ -70,12 +69,12 @@ struct FilledButton: ButtonStyle {
 
 struct LoginTextField: TextFieldStyle {
     public func _body(configuration: TextField<Self._Label>) -> some View {
-     return configuration
-        .padding(EdgeInsets(top: 8, leading: 16, bottom: 7, trailing: 16))
-        .background(Color.white)
-        .overlay(RoundedRectangle(cornerRadius: 8)
-                    .strokeBorder(lineWidth: 2)
-                    .foregroundColor(.blue))
-        .shadow(color: Color.gray.opacity(0.4), radius: 3, x: 1, y: 2)
+        return configuration
+            .padding(EdgeInsets(top: 8, leading: 16, bottom: 7, trailing: 16))
+            .background(Color.white)
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(lineWidth: 2)
+                        .foregroundColor(.blue))
+            .shadow(color: Color.gray.opacity(0.4), radius: 3, x: 1, y: 2)
     }
 }
