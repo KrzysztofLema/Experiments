@@ -44,7 +44,6 @@ struct LoginScreenView: View {
             Button("Log in") {}
                 .buttonStyle(FilledButton())
         }
-        padding()
         
     }
 }
