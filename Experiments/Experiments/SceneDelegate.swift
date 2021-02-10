@@ -11,12 +11,13 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let mainViewModel = MainViewModel()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = LoginScreenViewController()
+        window.rootViewController = MainViewController(viewModel: mainViewModel)
         window.makeKeyAndVisible()
         self.window = window
     }

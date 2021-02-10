@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
     override func viewDidLoad() {
         addSwiftUIView()
     }
 }
-private extension ViewController {
+private extension SplashViewController {
     func addSwiftUIView() {
         let controller = UIHostingController(rootView: FirstView())
         addChild(controller)
