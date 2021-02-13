@@ -8,5 +8,9 @@
 import Foundation
 
 class LoginViewModel {
+    let loginRepository: LoginRepository
     
+    init(loginRepository: LoginRepository) {
+        self.loginRepository = loginRepository
+    }
 }

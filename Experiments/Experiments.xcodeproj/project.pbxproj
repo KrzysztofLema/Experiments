@@ -17,6 +17,7 @@
 		955E099E25B31D0B00A3D0C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955E099C25B31D0B00A3D0C7 /* LaunchScreen.storyboard */; };
 		955E09A925B31D0B00A3D0C7 /* ExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09A825B31D0B00A3D0C7 /* ExperimentsTests.swift */; };
 		955E09B425B31D0B00A3D0C7 /* ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */; };
+		956B961525D81DDD001F06EC /* LoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B961425D81DDD001F06EC /* LoginRepositoryImpl.swift */; };
 		959A870F25C204BC006BD867 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A870E25C204BC006BD867 /* LoginScreenViewController.swift */; };
 		959A871425C204D1006BD867 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A871325C204D1006BD867 /* LoginScreenView.swift */; };
 		95DA96BD25B9E84A00447478 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA96BC25B9E84A00447478 /* SplashScreenView.swift */; };
@@ -56,6 +57,7 @@
 		955E09AF25B31D0B00A3D0C7 /* ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955E09B325B31D0B00A3D0C7 /* ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsUITests.swift; sourceTree = "<group>"; };
 		955E09B525B31D0B00A3D0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956B961425D81DDD001F06EC /* LoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryImpl.swift; sourceTree = "<group>"; };
 		959A870E25C204BC006BD867 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		959A871325C204D1006BD867 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		95DA96BC25B9E84A00447478 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		955E099025B31D0700A3D0C7 /* Experiments */ = {
 			isa = PBXGroup;
 			children = (
+				956B961125D81D9A001F06EC /* Repositories */,
 				950A23B725D4927A00565A08 /* Screens */,
 				955E099125B31D0700A3D0C7 /* AppDelegate.swift */,
 				955E099A25B31D0B00A3D0C7 /* Assets.xcassets */,
@@ -173,6 +176,30 @@
 				955E09B525B31D0B00A3D0C7 /* Info.plist */,
 			);
 			path = ExperimentsUITests;
+			sourceTree = "<group>";
+		};
+		956B961125D81D9A001F06EC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				956B961225D81DAA001F06EC /* LoginRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		956B961225D81DAA001F06EC /* LoginRepository */ = {
+			isa = PBXGroup;
+			children = (
+				956B961325D81DC5001F06EC /* LoginRepoImpl */,
+			);
+			path = LoginRepository;
+			sourceTree = "<group>";
+		};
+		956B961325D81DC5001F06EC /* LoginRepoImpl */ = {
+			isa = PBXGroup;
+			children = (
+				956B961425D81DDD001F06EC /* LoginRepositoryImpl.swift */,
+			);
+			path = LoginRepoImpl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +334,7 @@
 				955E099625B31D0700A3D0C7 /* SplashScreenViewController.swift in Sources */,
 				95DA96BD25B9E84A00447478 /* SplashScreenView.swift in Sources */,
 				955E099225B31D0700A3D0C7 /* AppDelegate.swift in Sources */,
+				956B961525D81DDD001F06EC /* LoginRepositoryImpl.swift in Sources */,
 				955E099425B31D0700A3D0C7 /* SceneDelegate.swift in Sources */,
 				959A871425C204D1006BD867 /* LoginScreenView.swift in Sources */,
 				959A870F25C204BC006BD867 /* LoginScreenViewController.swift in Sources */,

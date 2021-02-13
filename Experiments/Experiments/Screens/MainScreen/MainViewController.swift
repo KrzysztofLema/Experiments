@@ -17,7 +17,7 @@ enum ViewToPresent {
 class MainViewController: UIViewController {
     
     let viewModel: MainViewModel
-    let loginViewController = LoginScreenViewController()
+    let loginViewController = LoginScreenViewController(loginViewModel: LoginViewModel(loginRepository: LoginRepositoryImpl()))
     let splashScreenViewController = SplashViewController()
     
     var subscriptions = Set<AnyCancellable>()

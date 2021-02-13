@@ -8,13 +8,26 @@
 import SwiftUI
 
 class LoginScreenViewController: UIViewController{
+    
+    let loginViewModel: LoginViewModel
+    
+    init(loginViewModel: LoginViewModel) {
+        self.loginViewModel = loginViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         addSwiftUIView()
     }
 }
 private extension LoginScreenViewController {
     func addSwiftUIView() {
-        let controller = UIHostingController(rootView: LoginScreenView())
+        let controller = UIHostingController(rootView: LoginScreenView(viewModel: loginViewModel))
         addChild(controller)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(controller.view)
