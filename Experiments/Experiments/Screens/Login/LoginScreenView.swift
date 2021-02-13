@@ -44,24 +44,32 @@ struct LoginScreenView: View {
                 .textFieldStyle(LoginTextField())
             
             Button("Log in") {
-                viewModel.logIn(login: login, password: password)
+                viewModel.logIn(login: "", password: "")
             }
-                .buttonStyle(FilledButton())
+            .buttonStyle(FilledButton())
         }
         
     }
 }
 
-
 struct LoginScreenView_Previews: PreviewProvider {
     
-    var viewModel: LoginViewModel
-    
     static var previews: some View {
-        LoginScreenView(viewModel: LoginViewModel(loginRepository: LoginRepositoryImpl()))
+        LoginScreenView(viewModel: LoginViewModel(loginRepository: MockLoginRepository(), loginResponder: MockLoginResponder()))
     }
 }
 
+class MockLoginRepository: LoginRepository {
+    func logIn(with credentials: Credentials, completionHandler: () -> ()) {}
+    
+    func logOut() {}
+}
+
+class MockLoginResponder: LoginResponder {
+    func signedIn() {}
+    
+    func notSignedIn() {}
+}
 
 struct FilledButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {

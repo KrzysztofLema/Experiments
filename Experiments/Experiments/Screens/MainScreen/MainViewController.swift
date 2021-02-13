@@ -12,13 +12,15 @@ import Combine
 enum ViewToPresent {
     case splashScreen
     case loginScreen
+    case homeScreen
 }
 
 class MainViewController: UIViewController {
     
     let viewModel: MainViewModel
-    let loginViewController = LoginScreenViewController(loginViewModel: LoginViewModel(loginRepository: LoginRepositoryImpl()))
+    lazy var loginViewController = LoginScreenViewController(loginViewModel: LoginViewModel(loginRepository: LoginRepositoryImpl(), loginResponder: viewModel))
     let splashScreenViewController = SplashViewController()
+    let homeScreenViewController = HomeScreenViewController()
     
     var subscriptions = Set<AnyCancellable>()
     
@@ -37,6 +39,8 @@ class MainViewController: UIViewController {
             presentLoginScreen()
         case .splashScreen:
             presentSplashScreen()
+        case .homeScreen:
+            presentHomeScreen()
         }
     }
     
@@ -70,6 +74,14 @@ private extension MainViewController {
     func presentSplashScreen() {
         addFullScreen(childViewController: splashScreenViewController)
     }
+    
+    func presentHomeScreen() {
+        remove(splashScreenViewController)
+        addFullScreen(childViewController: homeScreenViewController)
+        if loginViewController.presentingViewController != nil {
+            dismiss(animated: true)
+        }
+    }
 }
 
 private extension UIViewController {
@@ -91,7 +103,7 @@ private extension UIViewController {
     
     func remove(_ child: UIViewController?) {
         guard let child = child, child.parent != nil else { return }
-
+        
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
