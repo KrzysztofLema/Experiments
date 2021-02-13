@@ -11,7 +11,7 @@ struct FirstView: View {
     @State var percent = 0.0
     @State var uScale: CGFloat = 1
     @State var squareColor = Color.white
-    @State var squereScale:CGFloat = 1
+    @State var squereScale: CGFloat = 1
     @State var lineScale: CGFloat = 1
     @State var textAlpha = 0.0
     @State var textScale: CGFloat = 1
@@ -23,7 +23,7 @@ struct FirstView: View {
     let uZoomFactor: CGFloat = 1.4
     let uSquereLength: CGFloat = 12
     let lineHeight: CGFloat = 28
-    let lineWidth:CGFloat = 4
+    let lineWidth: CGFloat = 4
     
     var body: some View {
         ZStack {
@@ -94,7 +94,6 @@ extension FirstView {
     var minAnimationInterval: Double { return 0.1 }
     var fadeAnimationDuration: Double { return 0.4 }
     
-    
     func handleAnimations() {
         runAnimationPart1()
         runAnimationPart2()
@@ -149,7 +148,7 @@ extension FirstView {
     }
     
     func restartAnimation() {
-        let deadline: DispatchTime = .now() + 2 *  uAnimationDuration
+        let deadline: DispatchTime = .now() + 2 * uAnimationDuration
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             self.percent = 0
             self.textScale = 1
@@ -166,7 +165,14 @@ struct FuberU: Shape {
         let end = percent * 360
         var p = Path()
         
-        p.addArc(center: CGPoint(x: rect.size.width/2, y: rect.size.height/2), radius: rect.size.width/2, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: end), clockwise: false)
+        p.addArc(
+            center: CGPoint(
+                x: rect.size.width / 2,
+                y: rect.size.height / 2),
+            radius: rect.size.width / 2,
+            startAngle: Angle(degrees: 0),
+            endAngle: Angle(degrees: end),
+            clockwise: false)
         
         return p
     }
@@ -179,7 +185,7 @@ struct FuberU: Shape {
 }
 
 #if DEBUG
-struct SplashScreen_Previews : PreviewProvider {
+struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
         FirstView()
     }

@@ -55,12 +55,16 @@ struct LoginScreenView: View {
 struct LoginScreenView_Previews: PreviewProvider {
     
     static var previews: some View {
-        LoginScreenView(viewModel: LoginViewModel(loginRepository: MockLoginRepository(), loginResponder: MockLoginResponder()))
+        LoginScreenView(
+            viewModel: LoginViewModel(
+                loginRepository: MockLoginRepository(),
+                loginResponder: MockLoginResponder()
+            ))
     }
 }
 
 class MockLoginRepository: LoginRepository {
-    func logIn(with credentials: Credentials, completionHandler: () -> ()) {}
+    func logIn(with credentials: Credentials, completionHandler: () -> Void) {}
     
     func logOut() {}
 }
