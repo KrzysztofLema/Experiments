@@ -7,13 +7,14 @@
 
 import Foundation
 protocol LoginRepository {
-    func logIn(with credentials: Credentials)
+    func logIn(with credentials: Credentials, completionHandler: () -> ())
     func logOut()
 }
 
 class LoginRepositoryImpl: LoginRepository {
-    func logIn(with credentials: Credentials) {
+    func logIn(with credentials: Credentials, completionHandler: () -> ()) {
         print("logged in with credentials: \(credentials)")
+        completionHandler()
     }
     
     func logOut() {
