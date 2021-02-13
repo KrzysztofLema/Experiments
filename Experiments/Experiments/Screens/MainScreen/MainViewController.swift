@@ -18,7 +18,11 @@ enum ViewToPresent {
 class MainViewController: UIViewController {
     
     let viewModel: MainViewModel
-    lazy var loginViewController = LoginScreenViewController(loginViewModel: LoginViewModel(loginRepository: LoginRepositoryImpl(), loginResponder: viewModel))
+    lazy var loginViewController = LoginScreenViewController(
+        loginViewModel: LoginViewModel(
+            loginRepository: LoginRepositoryImpl(),
+            loginResponder: viewModel)
+    )
     let splashScreenViewController = SplashViewController()
     let homeScreenViewController = HomeScreenViewController()
     
