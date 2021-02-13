@@ -12,6 +12,8 @@ struct LoginScreenView: View {
     @State var login: String = ""
     @State var password: String = ""
     
+    let viewModel: LoginViewModel
+    
     let blueColor = Color(.systemBlue)
     var body: some View {
         VStack {
@@ -41,7 +43,9 @@ struct LoginScreenView: View {
             TextField("Password", text: $password)
                 .textFieldStyle(LoginTextField())
             
-            Button("Log in") {}
+            Button("Log in") {
+                viewModel.logIn(login: login, password: password)
+            }
                 .buttonStyle(FilledButton())
         }
         
@@ -50,8 +54,11 @@ struct LoginScreenView: View {
 
 
 struct LoginScreenView_Previews: PreviewProvider {
+    
+    var viewModel: LoginViewModel
+    
     static var previews: some View {
-        LoginScreenView()
+        LoginScreenView(viewModel: LoginViewModel(loginRepository: LoginRepositoryImpl()))
     }
 }
 
