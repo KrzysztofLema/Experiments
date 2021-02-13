@@ -8,9 +8,15 @@
 import Foundation
 
 class LoginViewModel {
-    let loginRepository: LoginRepository
+   private let loginRepository: LoginRepository
     
     init(loginRepository: LoginRepository) {
         self.loginRepository = loginRepository
     }
+    
+    func logIn(login: String, password: String) {
+        loginRepository.logIn(with: Credentials(login: login, password: password))
+    }
+    
+    
 }

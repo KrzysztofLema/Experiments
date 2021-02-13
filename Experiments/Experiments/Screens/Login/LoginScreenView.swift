@@ -43,7 +43,9 @@ struct LoginScreenView: View {
             TextField("Password", text: $password)
                 .textFieldStyle(LoginTextField())
             
-            Button("Log in") {}
+            Button("Log in") {
+                viewModel.logIn(login: login, password: password)
+            }
                 .buttonStyle(FilledButton())
         }
         
