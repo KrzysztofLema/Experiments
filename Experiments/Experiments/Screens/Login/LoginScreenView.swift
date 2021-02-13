@@ -62,6 +62,7 @@ struct LoginScreenView_Previews: PreviewProvider {
     }
 }
 
+
 struct FilledButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration
